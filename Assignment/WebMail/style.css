@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow:hidden;
+}
+.container{
+    margin:100px;
+    border:1px solid black;
+}
+.header{
+    background-color: #ccc;
+    padding:5px;
+    border-bottom:1px solid black;
+}
+.navigation{
+    float:left;
+    width:200px;
+    margin:20px;
+    padding:5px;
+    border:1px solid black;
+}
+.email{
+    float:right;
+    width:500px;
+    height:300px;
+    margin: 10px 100px 20px;
+    border:1px solid black;
+    padding: 1px;
+    overflow-y: auto;
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+th{
+    background-color: #ccc;
+}
+td{
+    border:1px solid #ccc;
+    height:100px;
+    padding:5px;
+}
+ul{
+    list-style-type: none;
+}
+.advertisement{
+    border: 1px solid black;
+    clear:both;
+    margin: 0px 30% 20px;
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+}
