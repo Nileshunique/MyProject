@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 50px;
+  font-size: 30px;
+}
+#number {
+  width: 120px;
+  height: 20px;
+  padding: 5px 15px;
+  font-size: 20px;
+}
+#clicked {
+  font-size: 30px;
+  padding: 5px;
+  margin-top: 10px;
+}
+table {
+  margin-top: 10px;
+}
