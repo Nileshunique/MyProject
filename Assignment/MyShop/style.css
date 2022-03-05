@@ -1,0 +1,204 @@
+*{
+    padding:0;
+    margin:0;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    text-decoration: underline;
+    color:blue;
+}
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: rgb(243, 243, 243);
+    z-index: 1;
+}
+.HeaderItem li, .navbar li{
+    display: inline-block;
+    padding:20px;
+}
+.HeaderItem{
+    display: inline-block;
+}
+.title{
+    font-size: 40px;
+    color: pink;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    position: absolute;
+    left:40%;
+    margin:5px;
+}
+.Active{
+    background-color: white;
+    box-shadow: 2px 0px 10px #ccc;
+    z-index: 2;
+}
+
+
+/* NavBar */
+.navbar{
+    position: fixed;
+    top:58px;
+    left:0;
+    width:100%;
+    padding:10px 0;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px #ccc;
+    /* border:1px solid blue; */
+}
+.navbar li{
+    display: inline-block;
+    padding:10px;
+}
+.navbar ul{
+    float:left;
+}
+.searchItems{
+    float:right;
+    margin: 10px 10px 0 0;
+}
+.searchItems input[type="text"]{
+    height:27px;
+    font-size: 18px;
+    width:200px;
+}
+.searchItems span{
+    padding:5px;
+    border:1px solid white;
+    outline: 1px solid black;
+    background-color: black;
+    margin-left: 5px;
+    color:white;
+}
+.text-pink a{
+    color:pink;
+}
+.offer{
+    position: relative;
+}
+.offer span{
+    position: absolute;
+    top:-10px;
+    left:0;
+    background-color: pink;
+    color: white;
+    padding: 0 5px;
+    font-size: small;
+    height:20px;
+}
+.offer span::after{
+    position:absolute;
+    top:100%;
+    left:50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color:pink transparent transparent transparent;
+    content:"";
+}
+.body{
+    position: relative;
+    top:120px;
+    padding-top: 10px;
+}
+.body::after{
+    content:"";
+    display:block;
+    clear: both;
+}
+.sidebar{
+    width:200px;
+    float:left;
+    border-right:1px solid #ccc;
+}
+.aside{
+    float:right;
+    width:calc(100% - 220px);
+}
+.text, .moreOption, .item-style{
+    margin: 5px 10px;
+}
+.text{
+    float:left;
+}
+.moreOption{
+    float:right;
+}
+.item-style li input[type="checkbox"]{
+    margin: 5px 10px;
+}
+.ViewMore{
+    text-align: center;
+}
+.group::after, .sort::after, .RH::after, .content::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.sort span{
+    float:right;
+}
+.item{
+    position: relative;
+    width:200px;
+    padding: 2px;
+    box-shadow: 1px 1px 5px black;
+    margin:10px;
+    float:left;
+}
+.item img{
+    height:230px;
+}
+.ItemOffer{
+    position:absolute;
+    left:15px;
+    top:15px;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    border-radius: 5px;
+}
+.rate, .heart{
+    margin:0 5px 0 0;
+}
+.rate{
+    float:left;
+}
+.currentRate{
+    color:red;
+    margin-right: 10px;
+}
+.actualRate{
+    text-decoration: line-through;
+}
+.heart{
+    float:right;
+}
+.ColorType{
+    width:20px;
+    height:20px;
+    display: inline-block;
+}
+.ItemRed{
+    outline: 1px solid black;
+    border: 1px solid white;
+    background-color: red;
+    content: "";
+}
+.ItemGreen{
+    background-color: Green;
+    content: "";
+}
+.ItemBlue{
+    background-color: Blue;
+    content: "";
+}
