@@ -9,12 +9,6 @@ xhr.open("GET", "cities.json", true); // true for asynchronous
 //   console.log("hello");
 // };
 
-//  {
-//         "id": "1218",
-//         "name": "Manali",
-//         "state": "Himachal Praddesh"
-//     }
-
 // what to do on response ready
 xhr.onload = function () {
   var cities = JSON.parse(this.responseText);
@@ -32,9 +26,6 @@ xhr.onload = function () {
         resultTag.append(li);
       }
     }
-    // console.log("function call");
   });
 };
 xhr.send();
-
-// console.log(cities);
