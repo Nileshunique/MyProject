@@ -19,9 +19,9 @@ document.querySelector(".loginbtn").addEventListener("click", function () {
         )
       ) {
         alert("Username should be alphabet, digit and '_' only.");
-      } else {
-        alert("You have entered correct Username and password format.");
+        return;
       }
     }
+    alert("You have entered correct Username and password format.");
   }
 });

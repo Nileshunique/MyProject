@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Book search app (client side)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        table tr:nth-child(even) {
+            background-color: #eee;
+            border-width: 2px 0px;
+            border-style: solid;
+            border-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Question</h3>
+    <p>Create a Javascript application that lets the user search for books under a particular language</p>
+    <p>Use AJAX to load <a
+            href="https://github.com/Nileshunique/falcon/blob/master/coding-challenges/data/books.json">books.json</a>
+    </p>
+    <p>Use an event handler to get the user input from the form.</p>
+    <p>Create DOM manipulation methods to show the search result using a table.</p>
+    <p>Answer</p>
+    <hr>
+    <div class="container">
+        <div class="searchBook" style="width:250px">
+            <h3>Book Library</h3>
+            <span class="d-block">Enter Language here</span>
+            <input type="text" name="bookCodeinput" class="w-100 ps-2 pb-1 mb-4" id="bookCodeInput"
+                placeholder="English">
+            <button class="btn btn-primary search">search</button>
+        </div>
+        <table class="output table">
+
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
