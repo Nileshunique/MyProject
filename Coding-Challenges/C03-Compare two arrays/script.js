@@ -23,10 +23,13 @@ var flag = 0;
 function compareObject(obj1, obj2) {
   let obj1Key = Object.keys(obj1); // creating key of an object
   let obj2Key = Object.keys(obj2);
+
   if (obj1Key.length == obj2Key.length) {
     for (let objKey of obj1Key) {
       // creating for loop acording to key in object
+      console.log(obj1[objKey] == obj2[objKey]);
       if (obj1[objKey] != obj2[objKey]) {
+        console.log(obj1 == obj2);
         if (
           typeof obj1[objKey] == "object" &&
           typeof obj2[objKey] == "object"
@@ -35,48 +38,48 @@ function compareObject(obj1, obj2) {
           if (JSON.stringify(obj1[objKey])[0] == "{") {
             compareObject(obj1[objKey], obj2[objKey]);
           } else {
-            compareArray(obj1[objKey], obj2[objKey]);
+            compareNestedArray(obj1[objKey], obj2[objKey]);
           }
         } else {
           flag = 1;
-          return flag;
-        }
-      } else {
-        flag = 1;
-        return flag;
-      }
-    }
-  } else {
-    flag = 1;
-    return flag;
-  }
-}
-// Creating function to compare array with in an array
-function compareArray(arr1, arr2) {
-  if (arr1.length == arr2.length) {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] != arr2[i]) {
-        if (typeof arr1[i] == "object" && typeof arr2[i] == "object") {
-          if (arr1.toString()[0] == "[") {
-            // Checking object type as array or object
-            compareArray(arr1[i], arr2[i]);
-          } else {
-            let flag = compareObject(arr1[i], arr2[i]);
-            if (flag == 1) {
-              console.log("arrays are not equal");
-              return;
-            }
-          }
-        } else {
-          console.log("arrays are not equal");
           return;
         }
       }
     }
   } else {
-    console.log("Arrays are not equal");
+    flag = 1;
     return;
   }
-  console.log("Both arrays are equal");
+}
+// Creating function to compare array with in an array
+function compareNestedArray(arr1, arr2) {
+  if (arr1.length == arr2.length) {
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] != arr2[i]) {
+        if (typeof arr1[i] == "object" && typeof arr2[i] == "object") {
+          // Checking object type as array or object
+          if (JSON.stringify(arr1[i])[0] == "{") {
+            compareObject(arr1[i], arr2[i]);
+            if (flag == 1) return;
+          } else {
+            compareNestedArray(arr1[i], arr2[i]);
+          }
+        } else {
+          flag = 1;
+          return;
+        }
+      }
+    }
+  } else {
+    flag = 1;
+    return;
+  }
+}
+function compareArray(arr1, arr2) {
+  flag = 0;
+  compareNestedArray(arr1, arr2);
+  flag == 1
+    ? console.log("arrays are not equal")
+    : console.log("Both arrays are equal");
 }
 compareArray(arr1, arr2);
